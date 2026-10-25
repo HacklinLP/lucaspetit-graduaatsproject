@@ -20,7 +20,7 @@
 % concrete behoefte is de aanleiding? Noem de mensen voor wie het een probleem
 % is. Vermijd algemeenheden als "bedrijven hebben nood aan".
 
-Vervang deze tekst.
+Ik loop stage bij Attentia en ben lid van het AI-team. Dit team houdt in dat ze systemen binnen attentia willen aanpassen, vernieuwen en optimaliseren door AI-technieken te implementeren in de systemen die al aanwezig zijn. Het gaat hier dan zowel over interne programma's en tools als externe, bijvoorbeeld voor de HR-klanten of wellbeing klanten.
 
 %---------- 2. Doelstelling ---------------------------------------------------
 
@@ -31,7 +31,7 @@ Vervang deze tekst.
 % het als een resultaat waarvan iemand kan vaststellen dat het er is, en
 % vermeld waaraan je zal merken dat het geslaagd is.
 
-Vervang deze tekst.
+Op het einde van het project bestaat er een self-service oplossing waarmee een klant zelf, via DOTS of een platform, een tijdelijk FTP-account aanvraagt. De backend-setup gebeurt daarna automatisch: het account wordt aangemaakt, de toegang wordt geconfigureerd en de inloggegevens worden veilig aan de klant bezorgd via mail. Na een vastgelegde periode (20 dagen) worden de bestanden automatisch verwijdert en na lange inactiviteit het account ook. Het project is geslaagd als een volledige uitwisseling (aanvraag, account, upload of download en opruiming) kan verlopen zonder dat iemand van IT tussenbeide komt, en als dat in een end-to-end test aantoonbaar werkt.
 
 %---------- 3. Technologieën --------------------------------------------------
 
@@ -49,7 +49,7 @@ Vervang deze tekst.
 % dat dan nu al in één zin: dan weet je begeleider meteen dat de AVG of de
 % AI Act meespeelt, en kan dat mee bekeken worden bij de goedkeuring.
 
-Vervang deze tekst.
+WingFTP is de FTP-server en ligt vast door de omgeving van het bedrijf, net als DOTS als vertrekpunt voor de aanvraag. De backend zal in C\# geschreven zijn en voor de communicatie zorgen tussen de frontend en de FTP-server. De frontend wordt gemaakt in react tijdens het prototyping en later vermoedelijk met Angular, aangezien de andere devs hiermee werken. De scripting en automatisatie van het accountbeheer en de koppeling tussen aanvraag en FTP-server doe ik met powershell en vermoedelijk n8n (nog niet 100 procent zeker). Daarbij komen netwerkdesign en firewallconfiguratie, en serverbeheer van de onderliggende infrastructuur. De oplossing zelf bevat geen AI wordt mee bekeken met mijn begeleider.
 
 %---------- 4. Afbakening -----------------------------------------------------
 
@@ -68,7 +68,7 @@ Vervang deze tekst.
 % Toets voor jezelf: welke analyse en welk ontwerp maak jij zelf? Kan je daar
 % niets over schrijven, dan heb je een taak en geen project.
 
-Vervang deze tekst.
+Mijn stage bestaat uit meerdere projecten, waaronder het Zero Touch-project, waarvan de FTP-oplossing deel uitmaakt, en de ontwikkeling van een AI-agent. Mijn graduaatsproject is de self-service FTP-oplossing als afgebakend geheel, end-to-end. Dat gaat verder dan code schrijven. Ik analyseer zelf de noden van klanten en IT, onderzoek de mogelijke aanpak en maak het ontwerp: de flow van aanvraag tot opruiming, de levenscyclus en beveiliging van accounts, de serverinfrastructuur, het netwerk en de firewallregels, en de communicatie met de klant. Daarna bouw ik de oplossing, test ik ze en documenteer ik ze.
 
 %---------- 5. Verwachte meerwaarde -------------------------------------------
 
@@ -79,7 +79,7 @@ Vervang deze tekst.
 % stage afgelopen is? Denk aan tijdwinst, minder fouten, nieuwe mogelijkheden,
 % lagere kosten, of een basis waarop verder gebouwd kan worden.
 
-Vervang deze tekst.
+oor IT verdwijnt het handmatig aanmaken en opruimen van accounts bij eenmalige uitwisselingen, wat veel tijd bespaart. Klanten krijgen sneller toegang, zonder te wachten op IT. Doordat accounts na een vaste periode automatisch worden uitgeschakeld en verwijderd, blijven er geen vergeten accounts met toegang open staan, wat de veiligheid verhoogt. Na mijn stage blijven de werkende oplossing, de documentatie en de beheerdershandleiding over. Die vormen een basis om het Zero Touch-principe, waarbij klanten zelf zaken regelen zonder menselijke tussenkomst, verder uit te breiden.
 
 %---------- 6. Planning en werkbelasting --------------------------------------
 
@@ -97,12 +97,12 @@ Vervang deze tekst.
     \toprule
     \textbf{Fase} & \textbf{Wat lever je op} & \textbf{Uren} \\
     \midrule
-    Analyse en vereisten      & overzicht van de vereisten   & 15  \\
-    Technologiekeuze          & verantwoorde keuze           & 10  \\
-    Ontwerp                   & architectuur en gegevensmodel& 15  \\
-    Realisatie                & werkende oplossing           & 40  \\
-    Testen en validatie       & testverslag                  & 10  \\
-    Rapport, poster en demo   & de op te leveren documenten  & 10  \\
+    Analyse en vereisten      & overzicht van de noden van klanten en IT en de vereisten van de oplossing & 12 \\
+    Technologiekeuze          & verantwoorde keuze van scripttaal, koppeling met de aanvraag en manier van veilige bezorging van inloggegevens & 8 \\
+    Ontwerp                   & technisch ontwerp: aanvraagflow, accountlevenscyclus, beveiliging, netwerk en firewallregels & 16 \\
+    Realisatie                & werkende oplossing: geautomatiseerd accountbeheer, koppeling met de aanvraag, serverconfiguratie & 38 \\
+    Testen en validatie       & testverslag van de end-to-end test en de controle van beveiliging en opruiming & 10 \\
+    Rapport, poster en demo   & eindrapport, technische documentatie, beheerdershandleiding, poster en demo & 16 \\
     \midrule
     \textbf{Totaal}           &                              & \textbf{100} \\
     \bottomrule

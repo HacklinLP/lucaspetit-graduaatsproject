@@ -83,17 +83,14 @@ oor IT verdwijnt het handmatig aanmaken en opruimen van accounts bij eenmalige u
 
 %---------- 6. Planning en werkbelasting --------------------------------------
 
-\section{Planning en werkbelasting}%
-\label{vst:planning}
-
 % Het graduaatsproject is ongeveer tien werkdagen, samen ongeveer 100 uren.
 % Verdeel die over de fasen van je project en geef per fase aan wat je oplevert.
 % Vermeld ook of je die dagen gefocust opneemt of gespreid over de stageperiode,
 % en dat je dit met je mentor afgesproken hebt.
 
-\begin{table}[htbp]
+\newcommand{\vstplanningtabel}{%
   \centering
-  \begin{tabular}{llr}
+  \begin{tabular}{l p{0.6\textwidth} r}
     \toprule
     \textbf{Fase} & \textbf{Wat lever je op} & \textbf{Uren} \\
     \midrule
@@ -108,8 +105,27 @@ oor IT verdwijnt het handmatig aanmaken en opruimen van accounts bij eenmalige u
     \bottomrule
   \end{tabular}
   \caption[Planning en werkbelasting]{\label{tab:vst-planning}%
-    Vervang deze verdeling door je eigen planning.}
-\end{table}
+    Vervang deze verdeling door je eigen planning.}}
+
+% In het tweekolommige voorstel past de tabel niet in één kolom. Daarom
+% beginnen titel en tabel samen bovenaan een nieuwe pagina, over de volle
+% breedte, net zoals de samenvatting. In het rapport (één kolom) blijft het
+% een gewone tabel.
+\makeatletter
+\if@twocolumn
+  \twocolumn[{%
+    \section{Planning en werkbelasting}\label{vst:planning}%
+    \def\@captype{table}%
+    \vstplanningtabel
+    \bigskip}]
+\else
+  \section{Planning en werkbelasting}%
+  \label{vst:planning}
+  \begin{table}[htbp]
+    \vstplanningtabel
+  \end{table}
+\fi
+\makeatother
 
 %---------- 7. Risico's -------------------------------------------------------
 
@@ -123,4 +139,8 @@ oor IT verdwijnt het handmatig aanmaken en opruimen van accounts bij eenmalige u
 %
 % Twee tot drie risico's met telkens één zin over wat je terugvalplan is.
 
-Vervang deze tekst.
+Een eerste risico is dat WingFTP minder mogelijkheden voor automatisch accountbeheer biedt dan verwacht, terwijl ik er zelf nog mee moet leren werken. Als dat zo blijkt, onderzoek ik dit vroeg in de analyse- en keuzefase en val ik terug op automatisatie via scripting of configuratiebestanden in plaats van een rechtstreekse koppeling.
+
+Een tweede risico is dat ik voor de koppeling met DOTS, de serverconfiguratie en de firewallregels afhankelijk ben van toegang en medewerking van collega's van IT en security. Ik regel die toegang en afspraken in het begin van het project met mijn mentor en werk in de tussentijd verder in een testomgeving.
+
+Een derde risico is de beperkte tijd: met ongeveer 100 uren is het end-to-end karakter van het project een uitdaging, zeker als dagen door drukte op de werkvloer niet vrijkomen. Daarom bouw ik eerst een minimale werkende versie (aanvraag, automatisch account en automatische verwijdering) en pak ik uitbreidingen pas daarna aan, zodat er altijd een bruikbaar resultaat is.
